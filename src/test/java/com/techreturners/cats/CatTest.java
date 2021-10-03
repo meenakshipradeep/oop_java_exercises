@@ -2,6 +2,7 @@ package com.techreturners.cats;
 
 import org.junit.Test;
 
+
 import static org.junit.Assert.*;
 
 public class CatTest {
@@ -63,4 +64,15 @@ public class CatTest {
         Cat domesticCat = new DomesticCat();
         assertEquals("Purrrrrrr", domesticCat.eat());
     }
+
+    @Test
+    public void feedTheRandomCat() {
+        DomesticCat domesticCat = new DomesticCat();
+        String result = domesticCat.feedTheHappyCat(new RandomStub(0));
+        assertEquals("Purrrrrrr", result);
+        //assertTrue((result.contains("Purrrrrrr")));
+    }
+
+
+
 }
